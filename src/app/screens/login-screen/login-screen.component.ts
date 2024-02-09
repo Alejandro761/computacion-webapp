@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 declare var $:any;
 
 @Component({
@@ -6,13 +7,16 @@ declare var $:any;
   templateUrl: './login-screen.component.html',
   styleUrls: ['./login-screen.component.scss']
 })
+
 export class LoginScreenComponent implements OnInit{
 
   public username:string = "";
   public password: string ="";
   public type:string = "password";
 
-  constructor(){}
+  constructor(
+    private router: Router
+  ){}
 
   ngOnInit(): void {
 
@@ -28,7 +32,6 @@ export class LoginScreenComponent implements OnInit{
       $("#show-password").attr("data-password", false);
       this.type = "password";
     }
-
   }
 
   public login(){
@@ -36,6 +39,6 @@ export class LoginScreenComponent implements OnInit{
   }
 
   public registrar(){
-
+    this.router.navigate(['registro-usuarios']); //que nos mande a la pagina de registro, el cual tiene como dirección el 'registro-usuarios'
   }
 }
