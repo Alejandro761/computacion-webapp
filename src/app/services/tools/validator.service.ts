@@ -34,7 +34,8 @@ export class ValidatorService {
   }
 
   between(input:any, min:any, max:any){
-    return (max >= input >= min);
+    // return (max >= input >= min);
+    return (max >= input && input >= min);
   }
 
   numeric(input:any){
