@@ -28,14 +28,17 @@ export class RegistroScreenComponent implements OnInit{
       this.isAdmin = true;
       this.isAlumno = false;
       this.isMaestro = false;
+      this.tipo_user = 'administrador';
     } else if (event.value == 'alumno') {
       this.isAdmin = false;
       this.isAlumno = true;
       this.isMaestro = false;
+      this.tipo_user = 'alumno';
     } else if (event.value == 'maestro') {
       this.isAdmin = false;
       this.isAlumno = false;
       this.isMaestro = true;
+      this.tipo_user = 'maestro';
     }
   }
 }

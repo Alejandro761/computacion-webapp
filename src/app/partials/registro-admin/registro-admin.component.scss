@@ -24,14 +24,16 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  // align-items: flex-start;
+  align-items: center;
   padding-top: 1.5rem;
   gap: 1.5rem;
 }
 
 .title-user{
   font-size: 28px;
-  text-align: left;
+  // text-align: left;
+  text-align: center;
   font-family: Nexa-Bold;
   letter-spacing: 2px;
   color: #231F20;
